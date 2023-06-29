@@ -1,0 +1,20 @@
+[package]
+name = "stock_crawler"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+arc = "0.0.1"
+scraper = "0.16.0"
+tokio = {version = "1.27.0", features = ["full"]}
+sea-orm = { version = "^0", features = [ "sqlx-sqlite", "runtime-tokio-native-tls", "macros" ] }
+axum = "0.6.16"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.68"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid =  {version = "1.3.3", features = ["v4"]}
+hyper = {version = "0.14.26", features = ["full"]}
+hyper-tls = "0.5.0"
